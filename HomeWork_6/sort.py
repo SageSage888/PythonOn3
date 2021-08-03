@@ -66,16 +66,16 @@ def main(folder):
         handle_archive(file, folder, "ARCH")
 
     for file in scan.TXT:
-        handle_image(file, folder, "TXT")
+        handle_other(file, folder, "TXT")
 
     for file in scan.PDF:
-        handle_image(file, folder, "PDF")
+        handle_other(file, folder, "PDF")
 
     for file in scan.MP3_MUSIC:
-        handle_image(file, folder, "MP3")
+        handle_other(file, folder, "MP3")
 
     for file in scan.MP4_VIDEOS:
-        handle_image(file, folder, "MP4")
+        handle_other(file, folder, "MP4")
 
     for f in scan.FOLDERS:
         handle_folder(f)
