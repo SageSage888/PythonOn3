@@ -43,6 +43,9 @@ def main():
             break
         elif statement == ".":
             break
+        else:
+            print('command not found')
+            main()
 
 
 def add(name, num):
