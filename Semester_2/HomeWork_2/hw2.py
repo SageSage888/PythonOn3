@@ -26,7 +26,7 @@ class IncorrectInput(Exception):
     pass
 
 
-class AddressBook:
+class AddressBook(UserDict):
     def add(self, arg):
         """
         Creates a new record in the address book by the specified name.
