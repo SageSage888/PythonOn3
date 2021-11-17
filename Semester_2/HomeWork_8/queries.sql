@@ -1,0 +1,12 @@
+select avg(rating_value) as avr from rating group by student_id order by avr desc limit 0,5;
+select avg(rating_value) as avr, student_id from rating where subject_id=3 group by student_id order by avr desc limit 0,1;
+select avg(rating.rating_value) from rating join students on rating.student_id=students.student_id where rating.subject_id=1 and students.group_id=3;
+select avg(rating_value) from rating;
+select subject_name from subjects where teacher='Sam Hayes';
+select first_name, last_name from students where group_id=2;
+select students.first_name, students.last_name, rating.rating_value from rating join students on rating.student_id=students.student_id where rating.subject_id=1 and students.group_id=3;
+select students.first_name, students.last_name, rating.rating_value, rating.rating_date from rating join students on rating.student_id=students.student_id where rating.subject_id=1 and students.group_id=3 order by ABS(DATEDIFF(rating.rating_date, NOW()));
+select distinct(s.subject_name) from subjects as s join rating as r on s.subject_id=r.subject_id where student_id=8;
+select distinct(s.subject_name) from subjects as s join rating as r on s.subject_id=r.subject_id where student_id=8 and s.teacher='Jason Long';
+select avg(rating_value) as avr from rating as r join subjects as s on s.subject_id=r.subject_id where r.student_id=5 and s.teacher='Jason Long' group by s.subject_id;
+select avg(rating_value) from rating as r inner join subjects as s on r.subject_id=s.subject_id where s.teacher='Frieda Evans';
