@@ -29,6 +29,11 @@ def read_root():
     return {"Test": "Hello"}
 
 
+@app.get("/doc")
+def read_root():
+    return 'There is the page on documentation. You can learn more by the following link https://www.uvicorn.org/'
+
+
 """ @app.get('/film_planeta/{film_id}', response_model=Film)
 async def get_film_planeta():
     async with aiohttp.ClientSession() as session:
